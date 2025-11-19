@@ -41,3 +41,39 @@ DB_Final_Project/
 ├── Flask-MySQL/
 │   └── app_shoestore.py        # Flask API (40% CRUD completed)
 └── ShoeStore.sql               # MySQL database schema
+
+
+More folders and modules (GUI, extended API, documentation) will be added in future milestones.
+
+---
+
+## 🚀 Upcoming Milestones
+
+### 🔹 Project Advance 2 (30%)
+- CRUD for Customers, Orders, OrderDetail, Shipments  
+- Partial GUI implementation and integration with API (50%)  
+- Reporting endpoints and database queries  
+
+### 🔹 Final Term Project (50%)
+- Full API implementation  
+- Fully functional GUI  
+- Documentation, report, and complete GitHub repository  
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3  
+- Flask  
+- Flask-SQLAlchemy  
+- Marshmallow  
+- MySQL 8.0  
+- Docker (for local MySQL deployment)  
+
+---
+
+## 👤 Author
+**Kevin Erazo — Steven Rodríguez**  
+Database Systems — Yachay Tech University  
+November 2025
+
