@@ -42,7 +42,7 @@ DB_Final_Project/
 │   └── app_shoestore.py        # Flask API (40% CRUD completed)
 └── ShoeStore.sql               # MySQL database schema
 
-
+``` 
 More folders and modules (GUI, extended API, documentation) will be added in future milestones.
 
 ---
