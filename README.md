@@ -1,79 +1,149 @@
-# DB_Final_Project — ShoeStore Management System
+# ShoeStore Management System
 
-This repository contains the initial components of the **Final Term Project** for the *Database Systems* course at Yachay Tech University.  
-The project consists of designing a relational database, developing a RESTful API using Flask-SQLAlchemy, and creating a GUI for managing a shoe store inventory and order system.
+This repository contains the full implementation of the **Final Term Project** for the Database Systems course at **Yachay Tech University**. The project includes a complete relational database, a fully functional RESTful API using Flask-SQLAlchemy, and an HTML-based GUI for managing a shoe store inventory, customers, orders, and shipments.
 
 ---
 
-## 📌 Project Advance 1 — Included in This Repository
+## 📌 Project Status — Fully Completed (100%)
 
-For **Project Advance 1 (20%)**, the following components are required and included:
+The repository now contains all required components for the final project:
 
-### ✔ Database Schema
-The file `ShoeStore.sql` contains the SQL script that defines the full relational database structure, including:
-- Supplier  
-- Product  
-- Customer  
-- Orders  
-- OrderDetail  
-- Shipment  
+### ✔ Database Schema (Complete)
 
-This schema follows the conceptual and logical design created for the system.
+The file `ShoeStore.sql` contains the full SQL script that defines the relational database:
 
-### ✔ API Development (40% Completed)
-The file `Flask-MySQL/app_shoestore.py` contains the initial REST API implementation using:
-- **Flask**
-- **Flask-SQLAlchemy**
-- **Marshmallow**
+- **Supplier**
+- **Product**
+- **Customer**
+- **Orders**
+- **OrderDetail**
+- **Shipment**
 
-CRUD operations implemented at this stage:
-- Suppliers (GET, POST, PUT, DELETE)
-- Products (GET, POST, PUT, DELETE)
+The script also includes:
+- Primary and foreign keys
+- Referential integrity
+- Sample data for all tables
 
-These endpoints are fully functional and connected to the MySQL database.
+### ✔ Full RESTful API (Complete)
+
+The file `Flask-MySQL/app_shoestore.py` implements a complete Flask API, featuring:
+
+**Implemented CRUD operations:**
+- **Suppliers** — GET, POST, PUT, DELETE
+- **Products** — GET, POST, PUT, DELETE
+- **Customers** — GET, POST, PUT, DELETE
+- **Orders** — GET, POST, PUT, DELETE
+- **OrderDetail** — GET, POST, DELETE
+- **Shipments** — GET, POST, PUT, DELETE
+
+The API uses:
+- Flask
+- Flask-SQLAlchemy
+- Marshmallow
+- PyMySQL
+
+All models, schemas, relationships and validations are fully implemented.
+
+### ✔ HTML GUI Frontend (Complete)
+
+A functional HTML/CSS/JS-based graphical user interface is included, providing:
+
+- Product management
+- Supplier management
+- Customer forms
+- Order creation and visualization
+- Shipment status updates
+- API integration for dynamic content
+
+This GUI serves as the user-facing dashboard for the ShoeStore system.
 
 ---
 
 ## 📁 Repository Structure
 
-```plaintext
+```
 DB_Final_Project/
 ├── Flask-MySQL/
-│   └── app_shoestore.py        # Flask API (40% CRUD completed)
-└── ShoeStore.sql               # MySQL database schema
-
-``` 
-More folders and modules (GUI, extended API, documentation) will be added in future milestones.
+│   └── app_shoestore.py        # Full Flask REST API (all CRUD complete)
+├── GUI/                        # HTML/CSS/JS graphical interface
+│   └── ... (frontend files)
+└── ShoeStore.sql               # Complete MySQL schema + sample data
+```
 
 ---
 
-## 🚀 Upcoming Milestones
+## 🚀 Development Timeline
+
+### 🔹 Project Advance 1 (20%)
+- Conceptual and logical model
+- Initial database schema
+- Partial API (Suppliers & Products CRUD)
 
 ### 🔹 Project Advance 2 (30%)
-- CRUD for Customers, Orders, OrderDetail, Shipments  
-- Partial GUI implementation and integration with API (50%)  
-- Reporting endpoints and database queries  
+- CRUD for Customers, Orders, OrderDetail, Shipments
+- GUI integration (50%)
+- Extended API endpoints
 
 ### 🔹 Final Term Project (50%)
-- Full API implementation  
-- Fully functional GUI  
-- Documentation, report, and complete GitHub repository  
+- Fully functional REST API
+- Fully implemented HTML GUI
+- Complete database
+- Final documentation & testing
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python 3  
-- Flask  
-- Flask-SQLAlchemy  
-- Marshmallow  
-- MySQL 8.0  
-- Docker (for local MySQL deployment)  
+- **Python 3**
+- **Flask**
+- **Flask-SQLAlchemy**
+- **Flask-Marshmallow**
+- **MySQL 8.0**
+- **HTML / CSS / JavaScript**
+- **Docker** (optional for MySQL deployment)
 
 ---
 
-## 👤 Author
-**Kevin Erazo — Steven Rodríguez**  
+## ▶️ How to Run the Project
+
+### 1. Import the database
+
+```bash
+mysql -u root -p < ShoeStore.sql
+```
+
+### 2. Install dependencies
+
+```bash
+pip install flask flask_sqlalchemy flask_marshmallow marshmallow pymysql
+```
+
+### 3. Start the Flask API
+
+```bash
+python3 Flask-MySQL/app_shoestore.py
+```
+
+API runs at:
+```
+http://127.0.0.1:5000/
+```
+
+### 4. Open the GUI
+
+Open any `.html` file in the `GUI/` folder in your browser.
+
+---
+
+## 👥 Authors
+
+**Kevin Erazo — Steven Rodríguez**
+
 Database Systems — Yachay Tech University  
 November 2025
 
+---
+
+## 📄 License
+
+This project is part of an academic assignment at Yachay Tech University.
