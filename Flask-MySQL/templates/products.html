@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Products</h2>
+
+<div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" id="pr-new-btn">+ New Product</button>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped" id="products-table">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Supplier ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<nav>
+  <ul class="pagination" id="products-pagination"></ul>
+</nav>
+
+<!-- MODAL -->
+<div class="modal fade" id="pr-modal" tabindex="-1">
+  <div class="modal-dialog">
+    <form class="modal-content" id="pr-form">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pr-modal-title">New Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <input type="hidden" id="pr-id">
+
+        <div class="mb-3">
+          <label class="form-label">Brand</label>
+          <input id="pr-brand" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Model</label>
+          <input id="pr-model" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Size</label>
+          <input id="pr-size" type="number" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input id="pr-price" type="number" step="0.01" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Stock</label>
+          <input id="pr-stock" type="number" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Supplier</label>
+          <select id="pr-supplier" class="form-select" required></select>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Order Details</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped" id="od-table">
+    <thead class="table-dark">
+      <tr>
+        <th>Order ID</th>
+        <th>Product ID</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<nav>
+  <ul class="pagination" id="od-pagination"></ul>
+</nav>
+{% endblock %}

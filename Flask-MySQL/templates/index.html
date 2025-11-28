@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="mb-4">ShoeStore Dashboard</h1>
+
+<div class="row g-4">
+
+  <!-- SUPPLIERS -->
+  <div class="col-md-3">
+    <div class="card shadow-sm h-100 p-3">
+      <h5>Suppliers</h5>
+      <p>Manage supplier list.</p>
+      <span class="badge bg-dark" id="dash-suppliers-count">0</span>
+      <a href="/gui/suppliers" class="btn btn-outline-primary mt-3">Go to Suppliers</a>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="col-md-3">
+    <div class="card shadow-sm h-100 p-3">
+      <h5>Products</h5>
+      <p>Manage shoe catalog and stock.</p>
+      <span class="badge bg-dark" id="dash-products-count">0</span>
+      <a href="/gui/products" class="btn btn-outline-primary mt-3">Go to Products</a>
+    </div>
+  </div>
+
+  <!-- CUSTOMERS -->
+  <div class="col-md-3">
+    <div class="card shadow-sm h-100 p-3">
+      <h5>Customers</h5>
+      <p>Manage customer information.</p>
+      <span class="badge bg-dark" id="dash-customers-count">0</span>
+      <a href="/gui/customers" class="btn btn-outline-primary mt-3">Go to Customers</a>
+    </div>
+  </div>
+
+  <!-- ORDERS & SHIPMENTS -->
+  <div class="col-md-3">
+    <div class="card shadow-sm h-100 p-3">
+      <h5>Orders & Shipments</h5>
+      <p>Create and manage orders and shipments.</p>
+
+      <div class="mt-2">
+        Pending shipments:
+        <span class="badge bg-warning text-dark" id="dash-pending-shipments">0</span>
+      </div>
+
+      <div class="d-flex gap-2 mt-3">
+        <a href="/gui/create-order" class="btn btn-primary btn-sm">Create Order</a>
+        <a href="/gui/orders" class="btn btn-outline-secondary btn-sm">Orders</a>
+        <a href="/gui/shipments" class="btn btn-outline-secondary btn-sm">Shipments</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REPORTS SECTION -->
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card shadow-sm h-100 p-3">
+      <h5>Reports</h5>
+      <p>Visualize sales and stock.</p>
+      <a href="/gui/reports" class="btn btn-outline-primary mt-2">Go to Reports</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

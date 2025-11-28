@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">System Queries</h2>
+
+<div class="card mb-4">
+  <div class="card-body">
+
+    <label class="form-label">Select a query:</label>
+    <select class="form-select mb-3" id="query-select">
+
+      <option value="products_suppliers">Products with their suppliers</option>
+      <option value="orders_status">Orders + customer + shipment status</option>
+      <option value="suppliers_stock">Total stock per supplier</option>
+      <option value="orders_by_customer">Total orders per customer</option>
+      <option value="sales_by_product">Sales per product</option>
+
+    </select>
+
+    <button id="run-query-btn" class="btn btn-primary w-100">
+      Run Query
+    </button>
+
+  </div>
+</div>
+
+<h4>Results</h4>
+<div class="table-responsive">
+  <table class="table table-striped" id="query-results-table">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+{% endblock %}

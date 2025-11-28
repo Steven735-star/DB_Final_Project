@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4 d-flex justify-content-between align-items-center">
+  Orders
+
+  <button id="orders-sort-btn" class="btn btn-outline-primary btn-sm">
+    Sort by Status (Asc)
+  </button>
+</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped" id="orders-table">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Customer ID</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<nav>
+  <ul class="pagination" id="orders-pagination"></ul>
+</nav>
+{% endblock %}
